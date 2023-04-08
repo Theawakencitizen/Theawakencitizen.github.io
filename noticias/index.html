@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Archivos en la carpeta</title>
+  <title>Noticias</title>
 </head>
 <body>
-	<h1>Archivos en la carpeta</h1>
-	<ul>
-		{% for file in site.static_files %}
-			{% if file.path contains 'noticias' %}
-				<li><a href="{{ file.path }}">{{ file.name }}</a></li>
-			{% endif %}
-		{% endfor %}
-	</ul>
+  <h1>Noticias</h1>
+  <ul>
+    <?php
+      $carpeta = 'noticias/';
+      $archivos = scandir($carpeta);
+      foreach($archivos as $archivo) {
+        if($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'html') {
+          echo '<li><a href="'.$carpeta.$archivo.'">'.$archivo.'</a></li>';
+        }
+      }
+    ?>
+  </ul>
 </body>
 </html>
