@@ -12,12 +12,12 @@ function buscarNoticias() {
 
   // Buscar en cada archivo HTML de la carpeta "noticias"
   $.ajax({
-    url: 'noticias/',
+    url: 'https://theawakencitizen.github.io/noticias/',
     success: function(data) {
       $(data).find('a:contains(".html")').each(function() {
         var url = $(this).attr('href');
         $.ajax({
-          url: 'noticias/' + url,
+          url: 'https://theawakencitizen.github.io/noticias/' + url,
           dataType: 'html',
           success: function(data) {
             var encontrado = true;
