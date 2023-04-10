@@ -6,8 +6,8 @@ layout: default
 
 <ul>
 {% for file in site.static_files %}
-  {% if file.path contains "/carpeta/" %}
-    <li><a href="{{ site.baseurl }}{{ file.path }}">{{ file.path | replace: '/carpeta/', '' }}</a></li>
+  {% if file.path contains "/noticias/" %}
+    <li><a href="{{ site.baseurl }}{{ file.path }}">{{ file.path | replace: '/noticias/', '' }}</a></li>
   {% endif %}
 {% endfor %}
 </ul>
