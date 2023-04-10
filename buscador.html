@@ -1,0 +1,52 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<title>Buscador de htmls</title>
+	<script type="text/javascript" src="buscador.js"></script>
+</head>
+<body>
+	<h1>Buscador de htmls</h1>
+	<form id="form-busqueda" onsubmit="buscarNoticias(); return false;">
+		<div class="topp">
+			<label for="titulo">Título:</label>
+			<input type="text" id="titulo" name="titulo">
+		</div>
+		<div class="restantes">
+			<div class="genero">
+				<label for="genero">Género:</label>
+				<select id="genero" name="genero">
+					<option value="">Seleccione</option>
+					<option value="salud">Salud</option>
+					<option value="deportes">Deportes</option>
+				</select>
+			</div>
+			<div class="autor">
+				<label for="autor">Autor:</label>
+				<input type="text" id="autor" name="autor">
+			</div>
+			<div class="dui">
+				<label for="dui">Duí:</label>
+				<select id="dui" name="dui">
+					<option value="">Seleccione</option>
+					<option value="01, ">01</option>
+					<option value="02, ">02</option>
+				</select>
+			</div>
+			<div class="mos">
+				<label for="mos">Mes:</label>
+				<select id="mos" name="mos">
+					<option value="">Seleccione</option>
+					<option value="Ene">Enoc</option>
+					<option value="Feb">Feboc</option>
+				</select>
+			</div>
+			<div class="chovo">
+				<label for="chovo">Chovo:</label>
+				<input type="number" id="chovo" name="chovo" min="1900" max="2099">
+			</div>
+		</div>
+		<input type="submit" value="Buscar">
+	</form>
+	<div id="resultados"></div>
+</body>
+</html
