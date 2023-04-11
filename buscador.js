@@ -1,3 +1,6 @@
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://raw.githubusercontent.com/; script-src 'self' https://code.jquery.com/ https://cdn.jsdelivr.net/ https://raw.githubusercontent.com/">
+
+
 function buscarNoticias() {
   // Recopilar información del formulario
   var titulo = $('#titulo').val();
