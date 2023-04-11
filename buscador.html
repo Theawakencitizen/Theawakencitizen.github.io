@@ -1,11 +1,12 @@
-<form method="GET" action="buscar.php">
+<form method="GET" action="https://awakengenerador.000webhostapp.com/buscadorterminado/buscar.php">
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 
 <style>
   .topp input[type="text"] {
-  width: 300px;
-  max-width: 400px;
+  width: 260px;
+  max-width: 260px;
   text-align: center;
 }
 
@@ -77,7 +78,7 @@ input[type="submit"] {
   margin: 10px;
   border-radius: 20px;
   border: none;
-  background-color: #f00;
+  background-color: #E53A1E;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -147,8 +148,8 @@ label[for="dia"] {
     <label for="genero">Género:</label>
   <select id="genero" name="genero">
     <option value="">Seleccione</option>
-    <option value="Salud">Salud</option>
-    <option value="Deportes">Deportes</option>
+    <option value="salud">Salud</option>
+    <option value="deportes">Deportes</option>
   </select>
   </div>
 <div class="autor">
@@ -217,16 +218,3 @@ label[for="dia"] {
 </div>
   <input type="submit" value="Buscar">
 </form>
-  <div id="resultados"></div>
-<script>
-  const form = document.querySelector('form');
-  const resultados = document.querySelector('#resultados');
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    fetch(`buscar.php?${new URLSearchParams(data)}`)
-      .then(response => response.text())
-      .then(html => resultados.innerHTML = html);
-  });
-</script>
